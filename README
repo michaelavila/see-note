@@ -1,3 +1,10 @@
-see-notes
+see-note
 
 Move between notes and source code.
+
+Configuration
+-------------
+
+  nnoremap <leader>nf :call FindNote()<cr>
+  nnoremap <leader>nd :call GotoNote()<cr>
+  nnoremap <leader>ns :call ListNotes()<cr>
