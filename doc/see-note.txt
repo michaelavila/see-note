@@ -1,0 +1,71 @@
+*see-note.txt* functionality for moving between notes and source code
+
+==============================================================================
+CONTENTS                                                        *NoteContents*
+
+  1. Introduction ............ |NoteIntroduction|
+  2. Configuration ........... |NoteConfiguration|
+  3. Usage ................... |NoteUsage|
+
+==============================================================================
+INTRODUCTION                                                *NoteIntroduction*
+
+The inspiration for this plugin comes from a technique used in the development
+of the Glasgow Haskell Compiler (GHC). Simon Marlow and Simon Peyton-Jones
+explain the idea in this excerpt from The Architecture of Open Source
+Applications:
+
+  1. Comments of any significant size are not interleaved with code, but
+     instead set off by themselves, with a heading in standard form.
+
+  2. At the point where the comment is relevant, we add a short comment
+     referring to the Note.
+
+  ...
+
+  Not only is it possible to go from the code that refers to the Note to the
+  Note itself, but the reverse is also possible, and that is often useful.
+  Moreover, the same Note may be referred to from multiple points in the code.
+
+This plugin provides a thin layer of functionality supporting this idea.
+
+==============================================================================
+CONFIGURATION                                              *NoteConfiguration*
+
+There are three commands you will want to map:
+
+  nmap <leader>ns :call ListNotes()<cr>
+  nmap <leader>nd :call GotoNote()<cr>
+  nmap <leader>nr :call FindNote()<cr>
+
+==============================================================================
+USAGE                                                              *NoteUsage*
+
+There are two important concepts to consider:
+
+  1. Note definition
+  2. Note references
+
+To leave a note, use the following pattern in any text file in your project:
+
+  Note: [title of note]
+  ~~~~~~~~~~~~~~~~~~~~~
+  A detailed explanation of the note. Perhaps in paragraphs, but maybe not.
+  Really, you should just use your best judgement. Be thorough, not wordy.
+
+To reference a note, use the following pattern in any text file in your
+project:
+
+  See: [title of note]
+
+If you've followed the instructions in |NoteConfiguration|, then you can move
+your cursor to the line containing the pattern "See: [some title]" and press
+`<leader>nd` to goto the definition of that note.
+
+If you're cursor is on the line containing "Note: [some title]" and you press
+`<leader>nr`, the |quickfix| list is populated with the location of each
+reference to that note. You can navigate through the list of references using
+the usual |quickfix| commands `:cn` and `:cp`.
+
+If you want a list of all note definitions, simply press `<leader>ns`. This
+will populate the |quickfix| list in a manner similar to `<leader>nr`.

@@ -2,9 +2,5 @@ see-note
 
 Move between notes and source code.
 
-Configuration
--------------
-
-  nnoremap <leader>nf :call FindNote()<cr>
-  nnoremap <leader>nd :call GotoNote()<cr>
-  nnoremap <leader>ns :call ListNotes()<cr>
+For more information see doc/see-note.txt in this repository. Alternatively,
+if you've installed this plugin, open vim and run `:help see-note`
