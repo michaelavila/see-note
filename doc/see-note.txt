@@ -1,14 +1,38 @@
 *see-note.txt* functionality for moving between notes and source code
 
+                         ___           ___           ___                     ~
+                        /\  \         /\  \         /\  \                    ~
+                       /::\  \       /::\  \       /::\  \                   ~
+                      /:/\ \  \     /:/\:\  \     /:/\:\  \                  ~
+                     _\:\~\ \  \   /::\~\:\  \   /::\~\:\  \                 ~
+                    /\ \:\ \ \__\ /:/\:\ \:\__\ /:/\:\ \:\__\                ~
+                    \:\ \:\ \/__/ \:\~\:\ \/__/ \:\~\:\ \/__/                ~
+                     \:\ \:\__\    \:\ \:\__\    \:\ \:\__\                  ~
+                      \:\/:/  /     \:\ \/__/     \:\ \/__/                  ~
+                       \::/  /       \:\__\        \:\__\                    ~
+                        \/__/         \/__/         \/__/                    ~
+                  ___           ___           ___           ___              ~
+                 /\__\         /\  \         /\  \         /\  \             ~
+                /::|  |       /::\  \        \:\  \       /::\  \            ~
+               /:|:|  |      /:/\:\  \        \:\  \     /:/\:\  \           ~
+              /:/|:|  |__   /:/  \:\  \       /::\  \   /::\~\:\  \          ~
+             /:/ |:| /\__\ /:/__/ \:\__\     /:/\:\__\ /:/\:\ \:\__\         ~
+             \/__|:|/:/  / \:\  \ /:/  /    /:/  \/__/ \:\~\:\ \/__/         ~
+                 |:/:/  /   \:\  /:/  /    /:/  /       \:\ \:\__\           ~
+                 |::/  /     \:\/:/  /     \/__/         \:\ \/__/           ~
+                 /:/  /       \::/  /                     \:\__\             ~
+                 \/__/         \/__/                       \/__/             ~
+
+
 ==============================================================================
-CONTENTS                                                        *NoteContents*
+CONTENTS                                                          *NoteContents*
 
   1. Introduction ............ |NoteIntroduction|
   2. Configuration ........... |NoteConfiguration|
   3. Usage ................... |NoteUsage|
 
 ==============================================================================
-INTRODUCTION                                                *NoteIntroduction*
+INTRODUCTION                                                  *NoteIntroduction*
 
 The inspiration for this plugin comes from a technique used in the development
 of the Glasgow Haskell Compiler (GHC). Simon Marlow and Simon Peyton-Jones
@@ -30,7 +54,7 @@ Applications:
 This plugin provides a thin layer of functionality supporting this idea.
 
 ==============================================================================
-CONFIGURATION                                              *NoteConfiguration*
+CONFIGURATION                                                *NoteConfiguration*
 
 There are three commands you will want to map:
 
@@ -39,7 +63,7 @@ There are three commands you will want to map:
   nmap <leader>nr :call FindNote()<cr>
 
 ==============================================================================
-USAGE                                                              *NoteUsage*
+USAGE                                                                *NoteUsage*
 
 There are two important concepts to consider:
 
