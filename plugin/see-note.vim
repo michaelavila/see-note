@@ -12,7 +12,8 @@ function! NoteFromToCommand(from, to)
 endfunction
 
 function! NoteNoteToCommand(note, to)
-  execute 'vimgrep /' . a:to . ': \[' . a:note . '\]/ **'
+  let pattern = a:to . ": \\[" . a:note . "\\]"
+  silent execute "grep -i '" . pattern . "' **/*(.)" | redraw!
 endfunction
 
 " - popluate quickfix list with note on line under cursor in source
@@ -31,4 +32,5 @@ endfunction
 " See: [example note]
 function! ListNotes()
   call NoteNoteToCommand('.*', 'note')
+  echom 'Notes now in quickfix'
 endfunction
